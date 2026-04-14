@@ -1,13 +1,16 @@
 :root {
-  --bg: #f5efe4;
-  --paper: #fffaf1;
-  --ink: #2c241d;
-  --muted: #67594c;
-  --accent: #8f4b2e;
-  --accent-dark: #6f371f;
-  --line: #dbcab3;
-  --hero: linear-gradient(135deg, rgba(143, 75, 46, 0.12), rgba(132, 107, 66, 0.08));
-  --shadow: 0 18px 40px rgba(64, 43, 28, 0.12);
+  --bg: #eef4f5;
+  --paper: #fbfefe;
+  --ink: #1e2a2f;
+  --muted: #4b6168;
+  --accent: #2f6f78;
+  --accent-dark: #214f56;
+  --line: #c7d8dc;
+  --hero: linear-gradient(135deg, rgba(47, 111, 120, 0.12), rgba(125, 155, 146, 0.12));
+  --shadow: 0 18px 40px rgba(27, 51, 56, 0.1);
+  --surface-tint: rgba(255, 255, 255, 0.82);
+  --success: #6d8f62;
+  --warning: #a86b5b;
 }
 
 * {
@@ -20,12 +23,13 @@ html {
 
 body {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Atkinson Hyperlegible", "Aptos", "Segoe UI", "Trebuchet MS", Verdana, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at top left, rgba(143, 75, 46, 0.1), transparent 32%),
-    linear-gradient(180deg, #f9f4ea 0%, var(--bg) 100%);
-  line-height: 1.7;
+    radial-gradient(circle at top left, rgba(47, 111, 120, 0.11), transparent 34%),
+    linear-gradient(180deg, #f7fbfb 0%, var(--bg) 100%);
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 a {
@@ -47,7 +51,7 @@ a {
 }
 
 .brand {
-  font-size: 1.2rem;
+  font-size: 1.24rem;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -57,7 +61,7 @@ a {
   flex-wrap: wrap;
   gap: 1rem;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 0.98rem;
 }
 
 .hero {
@@ -66,7 +70,7 @@ a {
 
 .hero-panel {
   background: var(--hero), var(--paper);
-  border: 1px solid rgba(143, 75, 46, 0.12);
+  border: 1px solid rgba(47, 111, 120, 0.14);
   border-radius: 28px;
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -84,9 +88,9 @@ a {
   margin-bottom: 1rem;
   padding: 0.35rem 0.8rem;
   border-radius: 999px;
-  background: rgba(143, 75, 46, 0.1);
+  background: rgba(47, 111, 120, 0.12);
   color: var(--accent-dark);
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -97,6 +101,7 @@ h3 {
   line-height: 1.15;
   margin: 0 0 1rem;
   font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 h1 {
@@ -111,7 +116,7 @@ h2 {
 p {
   margin: 0 0 1rem;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.08rem;
 }
 
 .hero-copy p:first-of-type {
@@ -136,7 +141,7 @@ p {
   border-radius: 999px;
   border: 1px solid var(--accent);
   font-weight: 700;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .button:hover {
@@ -145,17 +150,17 @@ p {
 
 .button-primary {
   background: var(--accent);
-  color: #fff9f4;
+  color: #f7fcfd;
 }
 
 .button-secondary {
-  background: transparent;
+  background: rgba(255, 255, 255, 0.5);
   color: var(--accent-dark);
 }
 
 .hero-card {
   align-self: center;
-  background: rgba(255, 250, 241, 0.9);
+  background: rgba(251, 254, 254, 0.92);
   border: 1px solid var(--line);
   border-radius: 22px;
   padding: 1.5rem;
@@ -193,7 +198,7 @@ main section {
 }
 
 .section-box {
-  background: rgba(255, 250, 241, 0.72);
+  background: var(--surface-tint);
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: 2rem;
@@ -227,24 +232,24 @@ main section {
 }
 
 .faith-panel {
-  background: linear-gradient(135deg, rgba(111, 55, 31, 0.96), rgba(78, 56, 40, 0.96));
-  color: #f8efe5;
+  background: linear-gradient(135deg, rgba(33, 79, 86, 0.96), rgba(57, 95, 101, 0.96));
+  color: #eef8f8;
   border-radius: 28px;
   padding: 2.5rem;
   box-shadow: var(--shadow);
 }
 
 .faith-panel p {
-  color: rgba(248, 239, 229, 0.88);
+  color: rgba(238, 248, 248, 0.88);
   max-width: 68ch;
 }
 
 .quote {
   margin-top: 1.5rem;
   padding-left: 1rem;
-  border-left: 3px solid rgba(248, 239, 229, 0.35);
+  border-left: 3px solid rgba(238, 248, 248, 0.35);
   font-size: 1.1rem;
-  color: #fff7ef;
+  color: #f5fdfd;
 }
 
 .closing {
@@ -279,11 +284,11 @@ main section {
 }
 
 .prose p {
-  font-size: 1.08rem;
+  font-size: 1.1rem;
 }
 
 .story-block {
-  background: rgba(255, 250, 241, 0.75);
+  background: var(--surface-tint);
   border: 1px solid var(--line);
   border-radius: 24px;
   padding: 2rem;
@@ -317,7 +322,7 @@ main section {
 }
 
 .quiz-panel {
-  background: rgba(255, 250, 241, 0.82);
+  background: var(--surface-tint);
   border: 1px solid var(--line);
   border-radius: 28px;
   padding: 2rem;
@@ -342,11 +347,11 @@ main section {
 }
 
 .quiz-question.is-correct {
-  border-color: #8aa57a;
+  border-color: var(--success);
 }
 
 .quiz-question.is-incorrect {
-  border-color: #b9755e;
+  border-color: var(--warning);
 }
 
 .quiz-question legend {
@@ -378,7 +383,7 @@ main section {
   padding: 1rem 1.25rem;
   border-radius: 18px;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  background: #f9fdfd;
 }
 
 .quiz-result strong {
@@ -413,7 +418,7 @@ main section {
 .worksheet-line {
   display: block;
   height: 1.4rem;
-  border-bottom: 1px solid #cdbba2;
+  border-bottom: 1px solid #bfd1d5;
   margin-bottom: 0.7rem;
 }
 
